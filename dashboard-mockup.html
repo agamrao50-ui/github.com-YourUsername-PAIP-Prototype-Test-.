@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIP - Pharmacist Dashboard (MVP Mockup)</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="compliance-banner">
+        ⚠️ **SECURE ACCESS:** This is a HIPAA-compliant, authenticated dashboard. All actions are logged.
+    </div>
+
+    <header class="dashboard-header">
+        <h2 style="margin:0;">PAIP - Pharmacy Conversion Dashboard</h2>
+        <div>
+            Welcome, Pharmacist Smith (ABC Pharmacy) | <a href="index.html" style="color:white;">Logout</a>
+        </div>
+    </header>
+
+    <div class="kpi-bar">
+        <div class="kpi-box">Revenue Recovered (MTD)<strong>$1,850</strong></div>
+        <div class="kpi-box">Conversion Rate (Pilot)<strong>10.0%</strong></div>
+        <div class="kpi-box">Scripts Converted (Total)<strong>15</strong></div>
+        <div class="kpi-box">Scripts Pending Analysis<strong>22</strong></div>
+    </div>
+
+    <div class="dashboard-main">
+        
+        <div class="upload-box">
+            <p style="font-size: 1.1rem; font-weight: 600;">Ready to Analyze Your Latest Rejections?</p>
+            <button class="btn btn-cta">SECURELY UPLOAD REJECTED RX CSV</button>
+            <p style="font-size: 0.85rem; margin-top: 10px; color: #666;">*Data requires MFA verification before processing.</p>
+        </div>
+
+        <h2>Alternative Match Queue & Results</h2>
+
+        <table class="rx-table">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Rejected Drug (Cost Barrier)</th>
+                    <th>Alternative 1 (Recommended)</th>
+                    <th>Alternative 2 (Therapeutic)</th>
+                    <th>Est. Patient Saving</th>
+                    <th>Action / Feedback</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="status-icon status-teal">💡</span> Ready</td>
+                    <td>Lyrica 75mg Caps (PBM Rejection - \$450 Co-Pay)</td>
+                    <td>**Pregabalin 75mg Caps** (Tier 1 Generic)</td>
+                    <td>Gabapentin 300mg Caps</td>
+                    <td>\$420</td>
+                    <td>
+                        <button class="action-button">Send to MD</button>
+                        <select style="margin-left: 5px;">
+                            <option>Feedback...</option>
+                            <option>Success - Filled</option>
+                            <option>Failed - MD Rejected</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="status-icon status-green">✅</span> Converted</td>
+                    <td>EpiPen Jr. Auto-Injector (Formulary Exclusion)</td>
+                    <td>**Adrenaclick Auto-Injector**</td>
+                    <td>Auvi-Q Auto-Injector</td>
+                    <td>\$380</td>
+                    <td><span style="color: #28a745; font-weight: 600;">Logged & Filled</span></td>
+                </tr>
+                <tr>
+                    <td><span class="status-icon status-blue">⏳</span> Analyzing</td>
+                    <td>Jardiance 10mg Tablets</td>
+                    <td>*Processing...*</td>
+                    <td>*Processing...*</td>
+                    <td>N/A</td>
+                    <td>Awaiting Result</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="main-footer">
+        <p style="margin: 0;">Secured & Monitored for HIPAA Compliance | Access Restricted to Licensed Professionals</p>
+    </footer>
+
+</body>
+</html>
